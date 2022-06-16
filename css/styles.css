@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+/* header  */
+header {
+    height: 60px;
+    padding: 0 5rem;
+    background-color: black ;
+    color: white ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+
+}
+
+.logo i {
+    font-size: 2.5rem;
+}
+
+.logo h1 {
+    display: inline;
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+
+.nav-bar {
+
+}
+
+.nav-bar ul {
+    margin-bottom: 0;
+}
+
+.nav-bar ul li {
+    display: inline;
+    text-transform:uppercase;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-weight: 500;
+    transition: all linear 0.2s;
+
+    position: relative;
+}
+
+.nav-bar ul li:hover {
+    color: #f2d338;
+}
+
+.nav-bar ul li::before {
+    content: " ";
+    height: 2px;
+    width: 0;
+    background-color: #f2d338;
+    transition: all linear 0.2s;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-bar ul li:hover::before {
+    width: 100%;
+}
+
+.header-search {
+    width: 200px;
+}
+
+.header-search form {
+    position: relative;
+    
+}
+
+.header-search form input {
+    font-size: 0.8rem;
+    width: 200px;
+    padding: 5px 10px;
+    transition: all linear 0.3s;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+}
+
+.header-search form:hover input {
+    padding: 8px 18px;
+}
+
+.header-search form i {
+    position: absolute;
+    bottom: 50%;
+    right: 5px;
+    transform: translateY(50%);
+    transition: all linear 0.5s;
+
+    color: black;
+    font-size: 0.9rem;
+}
+
+.header-search form:hover i {
+    font-size: 1rem;
+}
+
+/* commercial */
+.commercial {
+    background-image: url(../img/bg-carousel1.jpg);
+    background-position: center;
+    background-size: cover;
+
+
+    height: 650px;
+    color: #fff;
+    
+    position: relative;
+
+}
+
+.commercial-content {
+    position: absolute;
+    left: 50px;
+    top: 30%;
+    transform: translateY(-30%);
+    
+
+    width: 650px;
+    padding-left: 80px;
+}
+
+.commercial-content h5 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.commercial-content h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Fascinate', cursive;
+}
+
+.commercial-content button {
+    font-size: 1rem;
+    padding: 10px 5px;
+    margin-top: 60px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    
+}
+
+.commercial-img {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    transform: translateY(-40%);
+
+    border: 10px solid #f2d338;
+    height: 450px;
+    width: 700px;
+    
+}
+
+.commercial-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 430px;
+
+    filter: contrast(100%);
+    
+}
+
+.effect-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.effect-left i {
+    font-size: 3rem;
+    color: black;
+}
+
+
+.effect-right {
+    position: absolute;
+    top: 50%;
+    right: 5.5%;
+    transform: translateY(-50%);
+
+}
+
+.effect-right i {
+    font-size: 3rem;
+    color: black;
+}
+
+/* food-danang  */
+.food-danang {
+   text-align: center;
+    
+}
+
+.food-danang .food-danang-title{
+    margin: 50px 0;
+    
+   
+}
+
+.title-clone {
+    padding: 0 400px;
+}
+
+.title-clone span {
+    background-color: #fff;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+
+
+.title-clone::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #121212;
+    margin-top: -15px;
+    margin-bottom: 40px;
+
+}
+
+.food-danang-img {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 400px;
+    margin-bottom: 70px;
+   
+
+}
+
+.img-danang-content {
+    width: 340px;
+    height: 450px;
+
+    position: relative;
+}
+
+.img-danang-content:hover {
+    cursor: pointer;
+}
+
+.img-danang-content img {
+    object-fit: cover;
+    width: 340px;
+    height: 450px;
+}
+
+.img-danang-content-title {
+    position: absolute;
+    top: 0;
+    left: 0%;
+
+    color: #fff;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.582);
+    height: 0;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.img-danang-content:hover .img-danang-content-title {
+    height: 450px;
+    opacity: 1;
+}
+
+.img-danang-content-title h3 {
+    font-size: 1.2rem;
+    padding-top: 50%;
+}
+
+.img-danang-content-title p {
+    color: lightgray;
+}
+
+.img-danang-content h4 {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+
+    color: black;
+    font-size: 1.2rem;
+    background-color: #fff;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.img-danang-content:hover h4 {
+    opacity: 0;
+}
+
+/* find-food  */
+.find-food {
+    line-height: 15px;
+    background-color: #f2d338;
+    padding: 0 200px;
+    
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-food form {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.find-food form label {
+    font-size: 1.5rem;
+    
+}
+
+.find-food form input {
+    padding-right: 200px;
+    height: 40px;
+    padding-left: 5px;
+}
+
+
+
+.find-food form i {
+    margin-left: -30px;
+}
+
+.find-food-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.find-food-item i {
+    font-size: 45px;
+}
+
+.find-food-item p {
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* about */
+.about {
+    position: relative;
+    text-align: center;
+
+    height: 500px;
+    margin: 30px 0
+    
+    
+}
+
+.about-content {
+    
+    
+    position: absolute;
+    top: 100px;
+    left: 250px;
+}
+
+.about-content h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 3rem;
+    color: #f2d338;
+    text-shadow: 10px 10px 8px #f2d338;
+    transform:skew(-15deg);
+    font-weight: bold;
+}
+
+.about-content button {
+    display: inline-block;
+
+    position: relative;
+
+    padding: 10px 20px;
+    border: 3px solid black;
+    background-color: #f2d338;
+    border-radius: 10px;
+    box-shadow: 10px 10px 3px gray;
+    transition: all ease-in-out 0.2s;
+}
+
+.about-content button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    padding: 11px 22px ;
+}
+
+.about-content button i {
+    font-size: 0.5rem;
+
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+    transform: translateY(50%);
+    
+}
+
+.about-img {
+    position: absolute;
+    top: 50px;
+    right: 300px;
+
+    border: 8px solid black;
+    overflow: hidden;
+    
+}
+
+.about-img img {
+    object-fit: cover;
+    width: 720px;
+    height: 400px;
+    transition: all linear 0.4s;
+
+}
+
+.about-img:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* food-hoian  */
+
+.food-hoian{
+    text-align: center;
+}
+
+.food-hoian .food-hoian-title{
+    margin: 50px 0; 
+   
+}
+
+/* about-1 */
+.about-1 {
+    position: relative;
+    text-align: center;
+
+    height: 560px;
+    
+    
+}
+
+.about-1 img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.about-content-1 {
+    position: absolute;
+    top: 100px;
+    right: 220px;
+
+    transform: skew(-13deg);
+    
+}
+
+.about-content-1 h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 2.5rem;
+    color: black;
+    text-shadow: 0px -1px 5px #f2d338;
+    font-weight: bold;
+}
+
+.about-content-1 p {
+    color: #fff;
+}
+
+.about-content-1 button {
+    display: inline-block;
+
+    position: relative;
+
+    padding: 10px 20px;
+    border: 3px solid black;
+    background-color: #f2d338;
+    border-radius: 10px;
+    box-shadow: 8px 8px 3px #f2d338;
+    transition: all ease-in-out 0.2s;
+    transform: skew(13deg)
+}
+
+.about-content-1 button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    padding: 11px 22px ;
+}
+
+.about-content-1 button i {
+    font-size: 0.5rem;
+
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+    transform: translateY(50%);
+    
+}
+
+.about-video-1 {
+    position: absolute;
+    top: 50px;
+    left: 230px;
+
+    border: 5px solid #f2d338;
+    box-shadow: 1px 1px 37px #f2d338;
+    overflow: hidden;
+    width: 800px;
+    height: 450px;
+    border-radius: 40px;
+    
+    
+}
+
+
+/* contact  */
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 0px;
+    background-color: black;
+    color: #fff;
+    height: 300px;
+    padding: 0 60px;
+}
+
+.contact-quick {
+    width: 300px;
+}
+
+.contact-quick h1 {
+    font-size: 1.8rem;
+}
+
+.contact-quick ul {
+    
+}
+
+.contact-quick ul li {
+    list-style-type: none;
+    width: 100px;
+
+    position: relative;
+    transition: all linear 0.2s;
+}
+
+.contact-quick ul li:hover {
+    cursor: pointer;
+    color: #f2d338;
+
+}
+
+.contact-quick ul li::before {
+    content: " ";
+    height: 2px;
+    width: 0;
+    background-color: #f2d338;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.contact-quick ul li:hover::before {
+    width: 100%;
+    transition: all linear 0.2s;
+}
+
+.contact-locations {
+    width: 40%;
+    line-height: 30px;
+}
+
+.contact-locations h1 {
+    font-size: 2rem;
+}
+
+.contact-locations form {
+    width: 400px;
+}
+
+.contact-locations form input {
+    width: 350px;
+    
+}
+
+.contact-locations form i {
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+
+.contact-socical {
+    width: 30%;
+}
+
+.contact-socical h1 {
+    font-size: 2rem;
+}
+
+.contact-socical .socical-items {
+    font-size: 1.5rem;
+}
+
+.socical-items i {
+    padding-right: 20px;
+}
+
+.contact-socical button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #f2d338;
+    box-shadow: 10px 10px 2px #fff;
+    transition: all linear 0.2s;
+}
+
+.contact-socical button:hover {
+    box-shadow: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
